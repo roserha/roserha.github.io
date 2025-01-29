@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <style>
+			body
+			{
+				overflow: hidden;
+				margin: 0;
+			}
+            img
+            {
+                position: absolute;
+            }
+
+            .city-b
+            {
+                position: absolute;
+                animation: slide 196s linear infinite;
+                animation-delay: -327s;
+            }
+
+            .city-c
+            {
+                position: absolute;
+                animation: slide 73s linear infinite;
+                animation-delay: -258s;
+            }
+
+            .city-d
+            {
+                position: absolute;
+                animation: slide 43s linear infinite;
+                animation-delay: -469s;
+            }
+
+            @keyframes slide {
+                0%{
+                    transform: translate3d(0, 0, 0);
+                }
+                100%{
+                    transform: translate3d(-1920px, 0, 0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img class="city-a" src="city-a.png">
+        <img class="city-b" src="city-b.png">
+        <img class="city-c" src="city-c.png">
+        <img class="city-d" src="city-d.png">
+        <!-- <script>
+            // image position variables
+            let aPos = Math.random() * -1920;
+            let bPos = Math.random() * -1920;
+            let cPos = Math.random() * -1920;
+            let dPos = Math.random() * -1920;
+
+            // deltatime variables
+            let currentUnix = Date.now();
+            let lastUnix = 0;
+            let deltaTime = 0;
+
+
+            // creates game loop
+            setInterval(gameLoop, 1);
+
+            function gameLoop()
+            { 
+                lastUnix = currentUnix;
+                currentUnix = Date.now();
+                deltaTime = (currentUnix - lastUnix)/1000;
+
+                // aPos -= 9.7 * deltaTime;
+                bPos -= 9.7 * deltaTime;
+                cPos -= 25.3 * deltaTime;
+                dPos -= 50.9 * deltaTime;
+
+                // if(aPos < -1920) aPos += 1920;
+                if(bPos < -1920) bPos += 1920;
+                if(cPos < -1920) cPos += 1920;
+                if(dPos < -1920) dPos += 1920;
+
+                // document.getElementById("city-a").style.left = aPos.toString() + "px";
+                document.getElementById("city-b").style.left = bPos.toString() + "px";
+                document.getElementById("city-c").style.left = cPos.toString() + "px";
+                document.getElementById("city-d").style.left = dPos.toString() + "px";
+            }
+        </script> -->
+    </body>
+</html>
