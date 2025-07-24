@@ -96,6 +96,8 @@
                                     <p>
                                         Utilizing Visual Studio, Azure DevOps, Wrike, Microsoft Teams and Outlook, we were able to organize our work efforts and collaborate towards development, utilizing languages/frameworks such as ASP.NET, C#, JavaScript, jQuery, Transact-SQL, and HTML+CSS.
                                     </p>
+
+									<p id="cla"></p>
                                 </div>
                             </div>
                         </section>
@@ -161,6 +163,23 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js"></script>
+			<script>
+				const urlParams = new URLSearchParams(window.location.search);
+				const myParam = urlParams.get('c');
+				const secret = (CryptoJS.MD5(myParam))
+
+				const filePath = `./${secret}.pdf`;
+
+				$.ajax({
+					url: filePath,
+					type:'HEAD',
+					success: function()
+					{
+						$("#cla").html(`Here you can also see a copy of the internship learning agreement for the class. <br><br> <embed type="text/pdf" src="${filePath}"  style="width: 95%; height: 400px">`);
+					}
+				});
+			</script>
 
 	</body>
 </html>
