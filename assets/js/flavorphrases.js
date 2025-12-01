@@ -31,6 +31,7 @@ $(document).ready(function() {
             $("#flavor").text(`There is a ${probby.toFixed(2)}% chance you're reading this.`);
         }
 
-        $("#flavornum").text(phrases.length - 1);
     }
+    
+    $("#flavornum").text(phrases.length - 1);
 });
